@@ -4,7 +4,7 @@ let indexMess = 0;
 //  V Pararameters V
 const uniqueActivity = true;
 
-const uniqueActivityMessage = "Bot_activity_here";
+const uniqueActivityMessage = "s'éclater au DVFL";
 const uniqueActivityType = "PLAYING";
 
 const intervalFromChange = 60000;
