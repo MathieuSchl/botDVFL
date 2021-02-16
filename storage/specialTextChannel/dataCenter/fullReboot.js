@@ -9,9 +9,9 @@ module.exports.run = async (bot, message, dataSpecialChannel)=>{
     }
     bot.destroy();
     bot.enventIndex.get("cronTab").stop(bot);
-    require('child_process').exec('sudo /sbin/shutdown -r now', function (msg) { console.log(msg) });
+    require('child_process').exec('reboot', function (msg) { console.log(msg) });
 };
 
 module.exports.help = {
-    name: "raspReboot"
+    name: "fullReboot"
 };
