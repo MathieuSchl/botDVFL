@@ -22,7 +22,6 @@ module.exports.run = async (bot) => {
 
         bot.basicFunctions.get("DbConfiguration").verifyTable(bot);
 
-        const channel = await bot.channels.fetch("810136225037025290");
 
         const message = await channel.messages.fetch("814220060838330378");
         const exampleEmbed = new Discord.MessageEmbed()
@@ -31,7 +30,6 @@ module.exports.run = async (bot) => {
             .setDescription('Cliquez sur la réaction pour être ping lorsqu\'il y a:\n\n' +
                 "🥳 => <@&813534071116005416>\n");
 
-        message.edit("")
 
     } catch (e) {
         const disk = config.location.split("")[0];
@@ -45,6 +43,8 @@ module.exports.run = async (bot) => {
             require("./cronTab.js").stop(bot);
             bot.destroy();
             await wait(5000);
+            console.log("Error in ready");
+            console.log(e);
             require("../storage/specialTextChannel/dataCenter/reboot.js").run(bot, null, null);
         }
     }
