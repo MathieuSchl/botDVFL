@@ -21,16 +21,6 @@ module.exports.run = async (bot) => {
         bot.specialTextChannel["console"].get("reloadConsole").run(bot);
 
         bot.basicFunctions.get("DbConfiguration").verifyTable(bot);
-
-
-        const message = await channel.messages.fetch("814220060838330378");
-        const exampleEmbed = new Discord.MessageEmbed()
-            .setColor('#0099ff')
-            .setTitle('Rôles jeux')
-            .setDescription('Cliquez sur la réaction pour être ping lorsqu\'il y a:\n\n' +
-                "🥳 => <@&813534071116005416>\n");
-
-
     } catch (e) {
         const disk = config.location.split("")[0];
         if (["C", "D", "E"].includes(disk)) {
