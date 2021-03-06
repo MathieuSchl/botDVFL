@@ -21,6 +21,8 @@ module.exports.run = async (bot) => {
         bot.specialTextChannel["console"].get("reloadConsole").run(bot);
 
         bot.basicFunctions.get("DbConfiguration").verifyTable(bot);
+
+        //bot.basicFunctions.get("checkMessageReactions").run(bot);
     } catch (e) {
         const disk = config.location.split("")[0];
         if (["C", "D", "E"].includes(disk)) {
